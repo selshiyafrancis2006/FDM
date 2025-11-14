@@ -34,21 +34,25 @@ Frequency Division Multiplexing (FDM) is a technique in which multiple message s
 
 ```
 
-fs = 30000;                
-t = 0:1/fs:0.02;          
+fs = 30000;
+t = 0:1/fs:0.02;
+
 fm = [150, 300, 450, 600, 750, 900];
 m = [];
 
 for i = 1:6
-    m(i, :) = sin(2 * %pi * fm(i) * t);   
+    m(i, :) = 4 * sin(2 * %pi * fm(i) * t);
 end
+
 fc = [3000, 5000, 7000, 9000, 11000, 13000];
+
 fdm = zeros(1, length(t));
 for i = 1:6
-    c = cos(2 * %pi * fc(i) * t);         
-    s = m(i, :) .* c;                     
-    fdm = fdm + s;                        
+    c = cos(2 * %pi * fc(i) * t);
+    s = m(i, :) .* c;
+    fdm = fdm + s;
 end
+
 scf(1);
 clf;
 for i = 1:6
@@ -56,18 +60,21 @@ for i = 1:6
     plot(t, m(i, :));
     title("Message Signal " + string(i));
 end
+
 scf(2);
 clf;
 plot(t, fdm);
 title("Multiplexed FDM Signal");
+
 demod = [];
 for i = 1:6
-    c = cos(2 * %pi * fc(i) * t);     
-    x = fdm .* c;                        
-    h = ones(1, 200)/200;                
-    y = conv(x, h, 'same');             
-    demod(i, :) = y;                     
+    c = cos(2 * %pi * fc(i) * t);
+    x = fdm .* c;
+    h = ones(1, 200)/200;
+    y = conv(x, h, 'same');
+    demod(i, :) = y;
 end
+
 scf(3);
 clf;
 for i = 1:6
@@ -80,11 +87,12 @@ end
 
 <h2>Output Waveform</h2>
 
-<img width="1689" height="999" alt="image" src="https://github.com/user-attachments/assets/f70c4365-2bd5-4e7d-b188-0b348be3850d" />
+<img width="1579" height="988" alt="image" src="https://github.com/user-attachments/assets/2850a5e7-b52c-4613-8d98-9f4a21e61400" />
 
-<img width="1695" height="956" alt="image" src="https://github.com/user-attachments/assets/b302aa7a-2822-4a36-8ffb-b15ffa2f0718" />
+<img width="1605" height="894" alt="image" src="https://github.com/user-attachments/assets/8db52f75-6501-4d19-802d-47fdb674efa5" />
 
-<img width="1613" height="985" alt="image" src="https://github.com/user-attachments/assets/df1a1767-d99d-46b6-9690-648def06061b" />
+<img width="1580" height="974" alt="image" src="https://github.com/user-attachments/assets/d9e21d82-88a6-44ac-9a8d-7f381235c2e2" />
+
 
 <h1>Result:</h1>
 
