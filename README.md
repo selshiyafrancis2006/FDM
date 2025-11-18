@@ -93,6 +93,9 @@ end
 
 <img width="1580" height="974" alt="image" src="https://github.com/user-attachments/assets/d9e21d82-88a6-44ac-9a8d-7f381235c2e2" />
 
+<h2>Tabulation:</h2>
+
+<img width="1641" height="934" alt="image" src="https://github.com/user-attachments/assets/98f5d1e4-69c4-47c2-aed8-609d0979656f" />
 
 <h1>Result:</h1>
 
