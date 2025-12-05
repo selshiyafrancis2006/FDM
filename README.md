@@ -95,7 +95,7 @@ end
 
 <h2>Tabulation:</h2>
 
-<img width="1641" height="934" alt="image" src="https://github.com/user-attachments/assets/98f5d1e4-69c4-47c2-aed8-609d0979656f" />
+<img width="1677" height="956" alt="image" src="https://github.com/user-attachments/assets/bc99c189-e287-4ca2-b8e8-473508d92831" />
 
 <h1>Result:</h1>
 
